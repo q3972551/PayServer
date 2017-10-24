@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE abatorConfiguration PUBLIC "-//Apache Software Foundation//DTD Abator for iBATIS Configuration 1.0//EN" "http://ibatis.apache.org/dtd/abator-config_1_0.dtd" >
+<abatorConfiguration >
+  <abatorContext >
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://192.168.3.134:3306/gamepay" userId="root" password="123456" >
+      <classPathEntry location="C:\Users\peanut\workspace\Tortoise\libs\mysql-connector-java-5.1.17-bin.jar" />
+    </jdbcConnection>
+    <javaModelGenerator targetPackage="com.db.wxpay.entity" targetProject="PayServer" />
+    <sqlMapGenerator targetPackage="dbsqlmap" targetProject="PayServer" />
+    <daoGenerator targetPackage="com.db.wxpay.dao" targetProject="PayServer" type="GENERIC-CI" />
+    <table schema="public" tableName="wxpay" domainObjectName="WxPayData">
+    </table>
+  </abatorContext>
+</abatorConfiguration>

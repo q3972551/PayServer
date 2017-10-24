@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>PayServer</display-name>
+  <servlet>
+    <servlet-name>ApplePayServlet</servlet-name>
+    <servlet-class>com.servlet.ApplePayServlet</servlet-class>
+  </servlet>
+    <servlet>  
+    <servlet-name>WeChatPrepayServlet</servlet-name>  
+   <servlet-class>com.servlet.WeChatPrepayServlet</servlet-class>  
+   </servlet>  
+     <servlet>  
+    <servlet-name>WeChatResultPayServlet</servlet-name>  
+   <servlet-class>com.servlet.WeChatResultPayServlet</servlet-class>  
+   </servlet>  
+     <servlet> 
+    <servlet-name>AliPrepayServlet</servlet-name>  
+   <servlet-class>com.servlet.AliPrepayServlet</servlet-class>  
+   </servlet>  
+     <servlet>  
+    <servlet-name>AliPayServlet</servlet-name>  
+   <servlet-class>com.servlet.AliPayServlet</servlet-class>  
+   </servlet>  
+   <servlet>   
+    <servlet-name>StartUpServlet</servlet-name>   
+    <servlet-class>com.StartUpServlet</servlet-class>   
+    <!-- 如果需要自动加载，加下面一句 -->   
+    <load-on-startup>0</load-on-startup>   
+</servlet>   
+  <servlet-mapping>
+    <servlet-name>ApplePayServlet</servlet-name>
+    <url-pattern>/applepay</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>  
+    <servlet-name>WeChatPrepayServlet</servlet-name>  
+    <url-pattern>/wxprepay</url-pattern>  
+</servlet-mapping>  
+  <servlet-mapping>  
+    <servlet-name>WeChatResultPayServlet</servlet-name>  
+    <url-pattern>/wxpay</url-pattern>  
+</servlet-mapping>  
+  <servlet-mapping>  
+    <servlet-name>AliPayServlet</servlet-name>  
+    <url-pattern>/alipay</url-pattern>  
+</servlet-mapping>  
+  <servlet-mapping>  
+    <servlet-name>AliPrepayServlet</servlet-name>  
+    <url-pattern>/aliprepay</url-pattern>  
+</servlet-mapping>  
+</web-app>

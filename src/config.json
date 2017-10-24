@@ -1,0 +1,10 @@
+{
+	"host":"192.168.3.134",
+	"port":8080,
+	"outip":"http://124.205.127.126:65533/PayServer/wxpay",
+	"redis":{
+	       "host":"10.1.2.103",
+	       "port":6379,
+	       "passwd":"9527games"
+	}
+}

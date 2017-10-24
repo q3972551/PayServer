@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMapConfig      
+PUBLIC "-//ibatis.apache.org//DTD SQL Map Config 2.0//EN"      
+"http://ibatis.apache.org/dtd/sql-map-config-2.dtd">
+<sqlMapConfig>
+	<settings cacheModelsEnabled="true" useStatementNamespaces="true"
+		maxRequests="32" maxTransactions="5" />
+	<transactionManager type="JDBC">
+		<dataSource type="SIMPLE">
+			<property name="JDBC.Driver" value="com.mysql.jdbc.Driver" />
+			<property name="JDBC.ConnectionURL" value="jdbc:mysql://10.1.2.101:3306/gamepay" />
+			<property name="JDBC.Username" value="xiaobin" />
+			<property name="JDBC.Password" value="AmqX8Hcr%/BkxAs,~" />
+			<property name="Pool.MaximumActiveConnetions" value="15" />
+			<property name="Pool.MaximumIdleConnetions" value="15" />
+			<property name="Pool.MaximumWait" value="1000" />
+		</dataSource>
+	</transactionManager>
+	<sqlMap resource="dbsqlmap/applepay_SqlMap.xml" />
+	<sqlMap resource="dbsqlmap/wxpay_SqlMap.xml" />
+	<sqlMap resource="dbsqlmap/alikey_SqlMap.xml" />
+	<sqlMap resource="dbsqlmap/alipay_SqlMap.xml" />
+</sqlMapConfig>
